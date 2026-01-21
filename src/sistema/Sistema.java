@@ -1,5 +1,9 @@
 package sistema;
 
-public class Sistema {
+import dominio.PlanStreaming;
+
+public interface Sistema {
+
+	int calcularTotal(PlanStreaming plan);
 
 }
