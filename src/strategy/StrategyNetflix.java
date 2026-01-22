@@ -13,23 +13,18 @@ public class StrategyNetflix implements PriceStrategy {
 
         int total = 0;
 
-        // base por tipo plan
         total += obtenerPrecioBase(plan, plataforma);
 
-        // pantallas extra
         total += Math.max(0, plan.getPantallas() - 1) * plataforma.getCostoPantallaExtra();
 
-        // calidad
         if (plan.getCalidad() == 3) { // 4K
             total += nf.getRecargo4K();
         } else if (plan.getCalidad() == 2) { // HD
             total += 1000;
         }
 
-        // extras checkbox
         total += costoExtras(plan);
 
-        // packs list
         total += costoPacks(plan);
 
         return total;
