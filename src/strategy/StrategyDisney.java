@@ -16,14 +16,12 @@ public class StrategyDisney implements PriceStrategy {
         total += obtenerPrecioBase(plan, plataforma);
         total += Math.max(0, plan.getPantallas() - 1) * plataforma.getCostoPantallaExtra();
 
-        // calidad (Disney cobra suave)
         if (plan.getCalidad() == 3) total += 1500;
         if (plan.getCalidad() == 2) total += 800;
 
         total += costoExtras(plan);
         total += costoPacks(plan);
 
-        // Atributo único: descuento familiar si tiene Kids Pack
         if (plan.getPacks().contains("Kids Pack")) {
             total -= dp.getDescuentoFamiliar();
         }

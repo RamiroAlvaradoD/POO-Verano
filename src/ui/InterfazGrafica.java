@@ -151,28 +151,6 @@ public class InterfazGrafica extends JFrame {
     private void configurarEventos() {
 
         btnCalcular.addActionListener(e -> calcularYMostrar());
-
-//        cbPlataforma.addActionListener(e -> calcularYMostrar());
-//        cbTipoPlan.addActionListener(e -> calcularYMostrar());
-//
-//        chkSinAnuncios.addActionListener(e -> calcularYMostrar());
-//        chkDescargas.addActionListener(e -> calcularYMostrar());
-//        chkDeportes.addActionListener(e -> calcularYMostrar());
-//
-//        listPacks.addListSelectionListener(e -> {
-//            if (!e.getValueIsAdjusting()) {
-//                calcularYMostrar();
-//            }
-//        });
-//
-//        slCalidad.addChangeListener(new ChangeListener() {
-//            @Override
-//            public void stateChanged(ChangeEvent e) {
-//                calcularYMostrar();
-//            }
-//        });
-//
-//        spPantallas.addChangeListener(e -> calcularYMostrar());
     }
 
     private void calcularYMostrar() {
@@ -182,7 +160,7 @@ public class InterfazGrafica extends JFrame {
         String tipoPlan = (String) cbTipoPlan.getSelectedItem();
 
         int pantallas = (int) spPantallas.getValue();
-        int calidad = slCalidad.getValue(); // 1 SD, 2 HD, 3 4K
+        int calidad = slCalidad.getValue(); 
 
         List<String> extras = new ArrayList<>();
         if (chkSinAnuncios.isSelected()) extras.add("Sin anuncios");
