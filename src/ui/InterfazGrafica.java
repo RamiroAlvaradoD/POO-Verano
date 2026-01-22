@@ -152,27 +152,27 @@ public class InterfazGrafica extends JFrame {
 
         btnCalcular.addActionListener(e -> calcularYMostrar());
 
-        cbPlataforma.addActionListener(e -> calcularYMostrar());
-        cbTipoPlan.addActionListener(e -> calcularYMostrar());
-
-        chkSinAnuncios.addActionListener(e -> calcularYMostrar());
-        chkDescargas.addActionListener(e -> calcularYMostrar());
-        chkDeportes.addActionListener(e -> calcularYMostrar());
-
-        listPacks.addListSelectionListener(e -> {
-            if (!e.getValueIsAdjusting()) {
-                calcularYMostrar();
-            }
-        });
-
-        slCalidad.addChangeListener(new ChangeListener() {
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                calcularYMostrar();
-            }
-        });
-
-        spPantallas.addChangeListener(e -> calcularYMostrar());
+//        cbPlataforma.addActionListener(e -> calcularYMostrar());
+//        cbTipoPlan.addActionListener(e -> calcularYMostrar());
+//
+//        chkSinAnuncios.addActionListener(e -> calcularYMostrar());
+//        chkDescargas.addActionListener(e -> calcularYMostrar());
+//        chkDeportes.addActionListener(e -> calcularYMostrar());
+//
+//        listPacks.addListSelectionListener(e -> {
+//            if (!e.getValueIsAdjusting()) {
+//                calcularYMostrar();
+//            }
+//        });
+//
+//        slCalidad.addChangeListener(new ChangeListener() {
+//            @Override
+//            public void stateChanged(ChangeEvent e) {
+//                calcularYMostrar();
+//            }
+//        });
+//
+//        spPantallas.addChangeListener(e -> calcularYMostrar());
     }
 
     private void calcularYMostrar() {

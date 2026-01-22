@@ -1,21 +1,15 @@
 package dominio;
 
-import java.util.List;
-
 public class Netflix extends PlataformaStreaming {
-	private int cargo4k;
 
-	public Netflix(int precioBasico, int precioEstandar, int precioPremium, int minPantallas,
-			int maxPantallas, int costoPantallaExtra, List<String> extrasDisponibles, int cargo4k) {
-		super("Netflix", precioBasico, precioEstandar, precioPremium, minPantallas, maxPantallas, costoPantallaExtra,
-				extrasDisponibles);
-		this.cargo4k = cargo4k;
-	}
+    private int recargo4K;
 
-	public int getCargo4k() {
-		return cargo4k;
-	}
-	
-	
+    public Netflix(int basico, int estandar, int premium, int costoPantallaExtra, int recargo4K) {
+        super("Netflix", basico, estandar, premium, costoPantallaExtra);
+        this.recargo4K = recargo4K;
+    }
 
+    public int getRecargo4K() {
+        return recargo4K;
+    }
 }
